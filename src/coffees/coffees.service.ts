@@ -107,9 +107,7 @@ export class CoffeesService {
       where: { name },
     });
 
-    if (existingFlavor) {
-      return existingFlavor;
-    }
+    if (existingFlavor) return existingFlavor;
 
     return this.flavorRepository.create({ name });
   }
