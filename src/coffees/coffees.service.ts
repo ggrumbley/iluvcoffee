@@ -22,9 +22,7 @@ export class CoffeesService {
     const { limit, offset } = paginationQuery;
 
     return this.coffeeRepository.find({
-      relations: {
-        flavors: true,
-      },
+      relations: { flavors: true },
       skip: offset,
       take: limit,
     });
